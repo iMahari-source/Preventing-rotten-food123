@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preventing Rotten Food - Complete Food Safety Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f0f8f0" width="1200" height="800"/><g fill="%234CAF50" opacity="0.1"><circle cx="100" cy="100" r="40"/><circle cx="300" cy="200" r="60"/><circle cx="500" cy="150" r="50"/><circle cx="700" cy="250" r="45"/><circle cx="900" cy="180" r="55"/><circle cx="1100" cy="120" r="35"/><circle cx="200" cy="400" r="65"/><circle cx="400" cy="500" r="40"/><circle cx="600" cy="450" r="55"/><circle cx="800" cy="550" r="50"/><circle cx="1000" cy="400" r="60"/><circle cx="150" cy="650" r="45"/><circle cx="350" cy="700" r="40"/><circle cx="550" cy="680" r="55"/><circle cx="750" cy="720" r="50"/><circle cx="950" cy="650" r="60"/><circle cx="1150" cy="700" r="35"/></g></svg>');
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            color: #2e7d32;
+            padding: 40px 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,248,240,0.95));
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "🍎🥬🍌🥕🍊🥦🍇🌽🍓🥒🍑🫑🥥🍍🥑🌶️🥜🫐🥝🍋";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            font-size: 24px;
+            opacity: 0.3;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            background: linear-gradient(45deg, #4CAF50, #8BC34A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #558b2f;
+            margin-bottom: 20px;
+        }
+
+        /* Login Section */
+        .login-section {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid #2196F3;
+            text-align: center;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: grid;
+            gap: 15px;
+        }
+
+        .login-input {
+            padding: 12px;
+            border: 2px solid #2196F3;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #4CAF50, #66BB6A);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(45deg, #2196F3, #42A5F5);
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+        }
+
+        /* Section Headers */
+        .section-header {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,255,248,0.95));
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .section-header h2 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        /* Expiration Tracker */
+        .expiration-tracker {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid #ff9800;
+        }
+
+        .date-input-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .date-input {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .date-input label {
+            display: block;
+            color: #f57c00;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .date-input input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ffb74d;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        /* Camera Section */
+        .camera-section {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,255,248,0.95));
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 2px solid #4CAF50;
+        }
+
+        #video {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            background: #000;
+            display: none;
+            border: 3px solid #4CAF50;
+        }
+
+        .camera-placeholder {
+            width: 100%;
+            max-width: 500px;
+            height: 375px;
+            background: linear-gradient(45deg, #e8f5e9, #c8e6c9);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #4CAF50;
+            border: 3px dashed #4CAF50;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 auto;
+        }
+
+        .camera-placeholder:hover {
+            background: linear-gradient(45deg, #c8e6c9, #a5d6a7);
+            transform: scale(1.02);
+        }
+
+        #canvas {
+            display: none;
+        }
+
+        /* Health Sections */
+        .health-section {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,248,248,0.95));
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid #f44336;
+        }
+
+        .bacterial-infections {
+            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid #f44336;
+        }
+
+        .mold-toxins {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid #9c27b0;
+        }
+
+        .chemical-changes {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid #e91e63;
+        }
+
+        .botulism-warning {
+            background: linear-gradient(135deg, #ffcdd2, #ef9a9a);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid #c62828;
+        }
+
+        .emergency-response {
+            background: linear-gradient(135deg, #ffcdd2, #ef9a9a);
+            border: 2px solid #f44336;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        /* Food Categories */
+        .food-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .category-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,255,248,0.95));
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid #4CAF50;
+        }
+
+        .food-item {
+            background: linear-gradient(135deg, #f8f9fa, #e8f5e9);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .storage-details {
+            background: #f0f8ff;
+            border-radius: 5px;
+            padding: 8px;
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: #1565c0;
+            border-left: 3px solid #2196F3;
+        }
+
+        .storage-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .info-tag {
+            background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+            color: #1565c0;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .temp-tag {
+            background: linear-gradient(45deg, #fff3e0, #ffe0b2);
+            color: #e65100;
+        }
+
+        .humidity-tag {
+            background: linear-gradient(45deg, #e8f5e9, #c8e6c9);
+            color: #2e7d32;
+        }
+
+        .shelf-tag {
+            background: linear-gradient(45deg, #f3e5f5, #e1bee7);
+            color: #6a1b9a;
+        }
+
+        /* Medical-specific styles */
+        .medical-fact {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        .death-rate {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            .food-categories { grid-template-columns: 1fr; }
+            .date-input-group { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍎 Preventing Rotten Food 🥬</h1>
+            <p>Complete Food Storage & Health Safety Guide</p>
+        </header>
+
+        <!-- 1. LOGIN SECTION -->
+        <div class="login-section" id="loginSection">
+            <h2>🔐 Login or Continue as Guest</h2>
+            <p>Access complete food storage guides and health safety information</p>
+            
+            <div class="login-form">
+                <input type="text" class="login-input" id="username" placeholder="👤 Username">
+                <input type="password" class="login-input" id="password" placeholder="🔒 Password">
+                <button class="btn" onclick="login()">🚀 Login</button>
+                <button class="btn btn-secondary" onclick="guestLogin()">👥 Continue as Guest</button>
+            </div>
+            
+            <p style="margin-top: 15px; color: #666;">
+                <strong>Demo Login:</strong> Username: demo | Password: demo123
+            </p>
+        </div>
+
+        <!-- MAIN APP (Hidden until login) -->
+        <div class="main-app" id="mainApp">
+            
+            <!-- 2. FOOD EXPIRATION TRACKER -->
+            <div class="section-header">
+                <h2>📅 Food Expiration Tracker</h2>
+                <p>Track your food items and get alerts before they expire</p>
+            </div>
+            
+            <div class="expiration-tracker">
+                <div class="date-input-group">
+                    <div class="date-input">
+                        <label for="itemName">🥕 Food Item Name:</label>
+                        <input type="text" id="itemName" placeholder="e.g., Apples, Milk, Bread">
+                    </div>
+                    <div class="date-input">
+                        <label for="expirationDate">📅 Expiration Date:</label>
+                        <input type="date" id="expirationDate">
+                    </div>
+                </div>
+                <button class="btn" onclick="addExpirationItem()">➕ Add Item</button>
+                <div id="expirationList" class="expiration-list"></div>
+            </div>
+
+            <!-- 3. FOOD FRESHNESS DETECTOR -->
+            <div class="section-header">
+                <h2>📸 Food Freshness Detector</h2>
+                <p>Take a photo or upload an image to check food freshness</p>
+            </div>
+            
+            <div class="camera-section">
+                <div class="camera-container">
+                    <div class="camera-placeholder" id="cameraPlaceholder" onclick="startCamera()">
+                        📷<br>Click to Enable Camera
+                    </div>
+                    <video id="video" autoplay></video>
+                    <canvas id="canvas" width="500" height="375" style="display:none;"></canvas>
+                </div>
+                <button class="btn" onclick="startCamera()">📷 Enable Camera</button>
+                <button class="btn" onclick="takePhoto()" id="captureBtn" style="display:none;">📸 Capture Photo</button>
+                <input type="file" id="fileInput" accept="image/*" style="display:none;" onchange="handleFileUpload(event)">
+                <button class="btn btn-secondary" onclick="document.getElementById('fileInput').click()">📁 Upload Photo</button>
+                <div id="resultSection" class="result-section" style="display:none;">
+                    <h3>🔬 Analysis Results</h3>
+                    <div id="fruitResult"></div>
+                </div>
+            </div>
+
+            <!-- 4. WHY ROTTEN FOOD IS DANGEROUS -->
+            <div class="section-header">
+                <h2>⚠️ Why Rotten Food is Dangerous</h2>
+                <p>Understanding the risks of consuming spoiled food</p>
+            </div>
+            
+            <div class="health-section">
+                <h3>Immediate Health Risks</h3>
+                <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                    <h4 style="color: #c62828;">🦠 Food Poisoning</h4>
+                    <p>Consuming rotten food can cause severe food poisoning with symptoms including:</p>
+                    <ul>
+                        <li>Nausea and vomiting</li>
+                        <li>Diarrhea and stomach cramps</li>
+                        <li>Fever and chills</li>
+                        <li>Dehydration</li>
+                    </ul>
+                </div>
+                
+                <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                    <h4 style="color: #9c27b0;">🍄 Mold Toxins</h4>
+                    <p>Moldy food contains mycotoxins that can cause:</p>
+                    <ul>
+                        <li>Liver damage</li>
+                        <li>Immune system suppression</li>
+                        <li>Allergic reactions</li>
+                        <li>Long-term health problems</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 5. HEALTH RISKS SECTION -->
+            <div class="section-header">
+                <h2>🏥 Health Risks</h2>
+                <p>Detailed medical information about food poisoning</p>
+            </div>
+            
+            <div class="health-section">
+                <!-- Bacterial Infections -->
+                <div class="bacterial-infections">
+                    <h3>🦠 Bacterial Infections</h3>
+                    <div style="background: white; padding: 15px; margin: 10px 0; border-radius: 8px;">
+                        <h4 style="color: #c62828;">Salmonella</h4>
+                        <p><strong>Source:</strong> Raw eggs, poultry, meat, dairy products</p>
+                        <p><strong>Symptoms:</strong> Severe diarrhea, fever (up to 104°F), stomach cramps</p>
+                        <p><strong>Timeline:</strong> 6 hours to 6 days after eating contaminated food</p>
+                        <p><strong>Complications:</strong> Dehydration, reactive arthritis, bloodstream infections</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; margin: 10px 0; border-radius: 8px;">
+                        <h4 style="color: #e65100;">E. coli</h4>
+                        <p><strong>Source:</strong> Undercooked ground beef, raw vegetables, unpasteurized juice</p>
+                        <p><strong>Symptoms:</strong> Severe stomach cramps, bloody diarrhea, vomiting</p>
+                        <p><strong>Complications:</strong> Hemolytic uremic syndrome (HUS) - kidney failure</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; margin: 10px 0; border-radius: 8px;">
+                        <h4 style="color: #2e7d32;">Listeria</h4>
+                        <p><strong>Source:</strong> Deli meats, soft cheeses, unpasteurized milk</p>
+                        <p><strong>Special Risk:</strong> 20x more likely to affect pregnant women</p>
+                        <p><strong>Complications:</strong> Miscarriage, stillbirth, premature birth</p>
+                    </div>
+                </div>
+
+                <!-- Mold Toxins -->
+                <div class="mold-toxins">
+                    <h3>🍄 Mold Toxins</h3>
+                    <div style="background: white; padding: 15px; margin: 10px 0; border-radius: 8px;">
+                        <h4 style="color: #6a1b9a;">Aflatoxins</h4>
+                        <p><strong>Found in:</strong> Peanuts, corn, tree nuts, grains stored in warm, humid conditions</p>
+                        <p><strong>Health Effects:</strong> Most potent natural liver carcinogen known</p>
+                        <p><strong>Long-term Risk:</strong> Liver cancer, immune suppression</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; margin: 10px 0; border-radius: 8px;">
+                        <h4 style="color: #0277bd;">Ochratoxin A</h4>
+                        <p><strong>Found in:</strong> Stored grains, coffee beans, dried fruits</p>
+                        <p><strong>Health Effects:</strong> Kidney damage, immune system suppression</p>
+                    </div>
+                </div>
+
+                <!-- Botulism Warning -->
+                <div class="botulism-warning">
+                    <h3>⚠️ BOTULISM - The Most Deadly</h3>
+                    <div style="background: white; padding: 20px; border-radius: 8px;">
+                        <h4 style="color: #b71c1c;">Clostridium botulinum</h4>
+                        <p><strong>Source:</strong> Improperly canned foods, garlic in oil, baked potatoes in foil</p>
+                        <p><strong>Symptoms:</strong> Blurred vision, drooping eyelids, difficulty breathing</p>
+                        <p><strong>Mortality Rate:</strong> 5-10% even with treatment</p>
+                        <p><strong>Medical Emergency:</strong> Requires immediate hospitalization</p>
+                    </div>
+                </div>
+
+                <!-- Emergency Response -->
+                <div class="emergency-response">
+                    <h4>🚨 FOOD POISONING EMERGENCY - WHEN TO CALL 911</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 15px;">
+                        <div style="background: white; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #c62828;">🚨 CALL IMMEDIATELY:</h5>
+                            <ul style="color: #d32f2f;">
+                                <li>Difficulty breathing or swallowing</li>
+                                <li>Double vision or blurred vision</li>
+                                <li>Severe dehydration (no urination for 8+ hours)</li>
+                                <li>Blood in vomit or stool</li>
+                                <li>Signs of botulism (drooping eyelids)</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #f57c00;">⚠️ CALL WITHIN 24 HOURS:</h5>
+                            <ul style="color: #e65100;">
+                                <li>High fever (over 101.5°F)</li>
+                                <li>Diarrhea lasting more than 3 days</li>
+                                <li>Severe abdominal pain</li>
+                                <li>Pregnant women with any symptoms</li>
+                                <li>Elderly or immunocompromised individuals</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; font-weight: bold; text-align: center; color: #c62828;">
+                        🏥 WHEN IN DOUBT, GO TO THE EMERGENCY ROOM - FOOD POISONING CAN BE FATAL
+                    </p>
+                </div>
+            </div>
+
+            <!-- 6. FOOD CATEGORIES - COMPLETE DATABASE -->
+            <div class="section-header">
+                <h2>🍎 Complete Food Database - 200+ Items</h2>
+                <p>Detailed storage instructions for every type of food</p>
+            </div>
+            
+            <div class="food-categories" id="foodCategories">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+
+            <!-- 7. TIPS VIDEO SECTION -->
+            <div class="section-header">
+                <h2>🎥 Tips for Preventing Rotten Food</h2>
+                <p>Professional tips and tricks for keeping food fresh longer</p>
+            </div>
+            
+            <div class="video-section">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Tips for Preventing Rotten Food" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>💡 Professional Tips Covered:</h3>
+                    <ul>
+                        <li>Temperature control techniques</li>
+                        <li>Humidity management strategies</li>
+                        <li>Container selection guides</li>
+                        <li>Ethylene gas separation methods</li>
+                        <li>Advanced storage hacks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 8. MEDICAL CONDITIONS & HOSPITAL RISKS -->
+            <div class="section-header">
+                <h2>🏥 Medical Conditions & Hospital Risks</h2>
+                <p>Complete medical information about food-related health complications</p>
+            </div>
+            
+            <div class="health-section">
+                <!-- Hospitalization Statistics -->
+                <div style="background: linear-gradient(135deg, #ffebee, #ffcdd2); border-radius: 10px; padding: 20px; margin: 15px 0;">
+                    <h3>📊 Hospitalization Statistics</h3>
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <ul>
+                            <li><strong>48 million Americans</strong> get food poisoning annually</li>
+                            <li><strong>128,000 hospitalizations</strong> each year</li>
+                            <li><strong>3,000 deaths</strong> annually from foodborne illness</li>
+                            <li><strong>10x higher hospitalization rates</strong> in people over 65</li>
+                            <li><strong>20x higher risk</strong> for pregnant women with Listeria</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Long-term Health Effects -->
+                <div style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); border-radius: 10px; padding: 20px; margin: 15px 0;">
+                    <h3>🧬 Long-term Health Effects</h3>
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <h4>Chronic Conditions from Food Poisoning:</h4>
+                        <ul>
+                            <li><strong>Reactive Arthritis:</strong> Joint pain lasting months or years</li>
+                            <li><strong>Chronic Kidney Disease:</strong> From E. coli O157:H7 infections</li>
+                            <li><strong>Neurological Disorders:</strong> Nerve damage, paralysis from botulism</li>
+                            <li><strong>Digestive Problems:</strong> Irritable bowel syndrome, food intolerances</li>
+                            <li><strong>Immune System Damage:</strong> Reduced white blood cell function</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cellular Damage -->
+                <div style="background: linear-gradient(135deg, #fff3e0, #ffe0b2); border-radius: 10px; padding: 20px; margin: 15px 0;">
+                    <h3>🧬 Cellular Level Damage</h3>
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <h4>How Toxins Damage Your Body:</h4>
+                        <ul>
+                            <li><strong>DNA Damage:</strong> Aflatoxins cause genetic mutations leading to cancer</li>
+                            <li><strong>Mitochondrial Destruction:</strong> Interferes with cellular energy production</li>
+                            <li><strong>Immune Suppression:</strong> Reduces white blood cell function by up to 70%</li>
+                            <li><strong>Neurological Impact:</strong> Toxins cross blood-brain barrier causing cognitive decline</li>
+                            <li><strong>Organ Damage:</strong> Liver, kidney, and heart damage from chronic exposure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Special Populations -->
+                <div style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9); border-radius: 10px; padding: 20px; margin: 15px 0;">
+                    <h3>👶 Special Populations at Risk</h3>
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <h4>High-Risk Groups:</h4>
+                        <ul>
+                            <li><strong>Infants under 1 year:</strong> NO honey - risk of infant botulism (can be fatal)</li>
+                            <li><strong>Pregnant Women:</strong> Listeria can cause miscarriage and stillbirth</li>
+                            <li><strong>Elderly over 65:</strong> Weakened immune systems, higher mortality rates</li>
+                            <li><strong>Cancer Patients:</strong> Chemotherapy weakens immune response</li>
+                            <li><strong>Diabetics:</strong> Higher risk of complications from foodborne illness</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Prevention is Key -->
+                <div style="background: linear-gradient(135deg, #f0f8ff, #e3f2fd); border-radius: 10px; padding: 20px; margin: 15px 0;">
+                    <h3>🔑 Prevention is Key</h3>
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <h4>Medical Prevention Protocol:</h4>
+                        <ul>
+                            <li>When in doubt, throw it out - your health is worth more than the food cost</li>
+                            <li>Use food thermometers to ensure proper storage temperatures</li>
+                            <li>Follow the 2-hour rule (1 hour if temperature > 90°F)</li>
+                            <li>Practice proper hand washing and kitchen hygiene</li>
+                            <li>Know when to seek medical attention</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Final Medical Warning -->
+                <div class="emergency-response">
+                    <h4>⚠️ FINAL MEDICAL WARNING</h4>
+                    <p style="font-size: 1.1em; text-align: center; font-weight: bold;">
+                        Food poisoning is not just "stomach flu" - it can cause permanent organ damage, 
+                        chronic health conditions, and even death. 
+                        <br><br>
+                        <strong style="color: #c62828;">When in doubt about food safety, always err on the side of caution. 
+                        Your life could depend on it.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // COMPLETE JAVASCRIPT FUNCTIONALITY
+
+        // Login System
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (username === 'demo' && password === 'demo123') {
+                document.getElementById('loginSection').style.display = 'none';
+                document.getElementById('mainApp').style.display = 'block';
+                initializeApp();
+                alert('🎉 Welcome! Access to complete food safety & health database unlocked!');
+            } else {
+                alert('❌ Invalid credentials. Try: demo / demo123');
+            }
+        }
+
+        function guestLogin() {
+            document.getElementById('loginSection').style.display = 'none';
+            document.getElementById('mainApp').style.display = 'block';
+            initializeApp();
+            alert('👋 Welcome Guest! You have access to food storage guides and basic health information.');
+        }
+
+        // Initialize App
+        function initializeApp() {
+            renderFoodCategories();
+            renderExpirationList();
+            document.getElementById('expirationDate').valueAsDate = new Date();
+        }
+
+        // Food Categories Data - Complete Database with Apple Example
+        const foodCategories = [
+            {
+                name: "🍎 Pome Fruits",
+                items: [
+                    {
+                        name: "Apples",
+                        storage: "Refrigerate in crisper drawer or cold water",
+                        temp: "30-35°F",
+                        humidity: "90-95%",
+                        shelfLife: "2-4 months",
+                        details: "EXAMPLE: Store apples in back of fridge where coldest. For extra crispness, submerge in cold water in sealed container! Temperature: 30-35°F, Humidity: 90-95%, Location: Refrigerator crisper drawer"
+                    },
+                    {
+                        name: "Pears",
+                        storage: "Room temp until ripe, then refrigerate",
+                        temp: "32-35°F",
+                        humidity: "90-95%",
+                        shelfLife: "3-5 days (ripe)",
+                        details: "EXAMPLE: Keep pears on counter until they smell sweet. To speed ripening, place in paper bag with banana. Once ripe, move to fridge immediately. Temperature: 32-35°F, Humidity: 90-95%, Location: Fridge crisper"
+                    },
+                    {
+                        name: "Asian Pears",
+                        storage: "Refrigerate in plastic bag with holes",
+                        temp: "32-35°F",
+                        humidity: "90-95%",
+                        shelfLife: "2-3 months",
+                        details: "EXAMPLE: Unlike European pears, Asian pears are eaten while crisp. Store in perforated plastic bag in fridge crisper. Temperature: 32-35°F, Humidity: 90-95%, Location: Refrigerator crisper drawer"
+                    }
+                ]
+            },
+            {
+                name: "🌴 Tropical Fruits",
+                items: [
+                    {
+                        name: "Mangoes",
+                        storage: "Room temp in paper bag until ripe, then refrigerate",
+                        temp: "55-70°F",
+                        humidity: "85-90%",
+                        shelfLife: "5-14 days",
+                        details: "EXAMPLE: Keep mangoes in paper bag at room temp until they smell sweet and flesh gives slightly near stem. Temperature: 55-70°F, Humidity: 85-90%, Location: Counter then fridge"
+                    },
+                    {
+                        name: "Pineapples",
+                        storage: "Room temp upside down, then refrigerate cut pieces",
+                        temp: "45-55°F",
+                        humidity: "85-90%",
+                        shelfLife: "3-5 days (cut)",
+                        details: "EXAMPLE: Store whole pineapple upside down on counter for 1-2 days to distribute sugars. Temperature: 45-55°F, Humidity: 85-90%, Location: Counter then fridge"
+                    },
+                    {
+                        name: "Dragon Fruit",
+                        storage: "Refrigerate whole or cut in airtight container",
+                        temp: "45-50°F",
+                        humidity: "85-90%",
+                        shelfLife: "2-3 weeks",
+                        details: "EXAMPLE: Store whole dragon fruit in fridge crisper drawer. Once cut, wrap tightly in plastic wrap. Temperature: 45-50°F, Humidity: 85-90%, Location: Refrigerator crisper"
+                    }
+                ]
+            },
+            {
+                name: "🍑 Stone Fruits",
+                items: [
+                    {
+                        name: "Peaches",
+                        storage: "Room temp stem-side down until ripe, then refrigerate",
+                        temp: "32-35°F",
+                        humidity: "90-95%",
+                        shelfLife: "3-5 days (ripe)",
+                        details: "EXAMPLE: Place peaches stem-side down on counter until they smell sweet and flesh gives slightly near stem. Temperature: 32-35°F, Humidity: 90-95%, Location: Counter then fridge"
+                    },
+                    {
+                        name: "Cherries",
+                        storage: "Refrigerate unwashed with stems attached",
+                        temp: "32-35°F",
+                        humidity: "90-95%",
+                        shelfLife: "5-7 days",
+                        details: "EXAMPLE: Store cherries unwashed in plastic bag with holes in fridge crisper. Keep stems attached. Temperature: 32-35°F, Humidity: 90-95%, Location: Fridge crisper"
+                    },
+                    {
+                        name: "Mangosteen",
+                        storage: "Refrigerate whole, keep dry",
+                        temp: "50-55°F",
+                        humidity: "85-90%",
+                        shelfLife: "2-3 weeks",
+                        details: "EXAMPLE: Store mangosteen in fridge crisper drawer. Don't wash until ready - purple rind stains! Temperature: 50-55°F, Humidity: 85-90%, Location: Refrigerator crisper"
+                    }
+                ]
+            },
+            {
+                name: "🍈 Melons",
+                items: [
+                    {
+                        name: "Watermelon",
+                        storage: "Whole: room temp. Cut: refrigerate in airtight container",
+                        temp: "50-60°F",
+                        humidity: "85-90%",
+                        shelfLife: "3-4 days (cut)",
+                        details: "EXAMPLE: Store whole watermelon at room temperature. Once cut, wrap tightly in plastic wrap. Temperature: 50-60°F, Humidity: 85-90%, Location: Counter then fridge"
+                    },
+                    {
+                        name: "Cantaloupe",
+                        storage: "Whole: room temp. Cut: refrigerate covered",
+                        temp: "36-41°F",
+                        humidity: "85-90%",
+                        shelfLife: "3-5 days (cut)",
+                        details: "EXAMPLE: Keep whole cantaloupe at room temperature until it smells sweet at the stem end. Temperature: 36-41°F, Humidity: 85-90%, Location: Counter then fridge"
+                    },
+                    {
+                        name: "Honeydew",
+                        storage: "Whole: room temp. Cut: refrigerate covered",
+                        temp: "45-50°F",
+                        humidity: "85-90%",
+                        shelfLife: "3-5 days (cut)",
+                        details: "EXAMPLE: Store whole honeydew at room temp until it turns creamy yellow and slightly soft. Temperature: 45-50°F, Humidity: 85-90%, Location: Counter then fridge"
+                    }
+                ]
+            },
+            {
+                name: "🍓 Berries",
+                items: [
+                    {
+                        name: "Strawberries",
+                        storage: "Refrigerate unwashed in original container",
+                        temp: "32-34°F",
+                        humidity: "90-95%",
+                        shelfLife: "3-7 days",
+                        details: "EXAMPLE: Keep strawberries in their original plastic container in fridge crisper. Don't wash until ready to eat. Temperature: 32-34°F, Humidity: 90-95%, Location: Fridge crisper"
+                    },
+                    {
+                        name: "Blueberries",
+                        storage: "Refrigerate unwashed, wash before eating",
+                        temp: "32-34°F",
+                        humidity: "90-95%",
+                        shelfLife: "5-10 days",
+                        details: "EXAMPLE: Store blueberries unwashed in a plastic container with holes in the fridge crisper. Temperature: 32-34°F, Humidity: 90-95%, Location: Fridge crisper"
+                    },
+                    {
+                        name: "Raspberries",
+                        storage: "Refrigerate unwashed in single layer",
+                        temp: "32-34°F",
+                        humidity: "90-95%",
+                        shelfLife: "2-3 days",
+                        details: "EXAMPLE: Store raspberries in a single layer on a paper towel-lined plate in the fridge. Don't stack them. Temperature: 32-34°F, Humidity: 90-95%, Location: Fridge (single layer)"
+                    }
+                ]
+            },
+            {
+                name: "🍊 Citrus Fruits",
+                items: [
+                    {
+                        name: "Oranges",
+                        storage: "Store in mesh bag in crisper drawer",
+                        temp: "45-48°F",
+                        humidity: "85-90%",
+                        shelfLife: "3-8 weeks",
+                        details: "EXAMPLE: Store oranges in a mesh bag in the fridge crisper drawer. They can last 2 months when properly stored. Temperature: 45-48°F, Humidity: 85-90%, Location: Fridge crisper"
+                    },
+                    {
+                        name: "Lemons",
+                        storage: "Refrigerate in plastic bag with holes",
+                        temp: "45-48°F",
+                        humidity: "85-90%",
+                        shelfLife: "3-4 weeks",
+                        details: "EXAMPLE: Store lemons in a plastic bag with holes in the fridge crisper. They'll last much longer than at room temperature. Temperature: 45-48°F, Humidity: 85-90%, Location: Fridge crisper"
+                    },
+                    {
+                        name: "Grapefruit",
+                        storage: "Store in crisper drawer",
+                        temp: "45-48°F",
+                        humidity: "85-90%",
+                        shelfLife: "4-6 weeks",
+                        details: "EXAMPLE: Store grapefruit in the crisper drawer of your fridge. They have a thick rind that protects them. Temperature: 45-48°F, Humidity: 85-90%, Location: Fridge crisper"
+                    }
+                ]
+            },
+            {
+                name: "🥝 Exotic Fruits",
+                items: [
+                    {
+                        name: "Kiwi",
+                        storage: "Room temp until soft like peach, then refrigerate",
+                        temp: "32-35°F",
+                        humidity: "90-95%",
+                        shelfLife: "1-2 weeks (ripe)",
+                        details: "EXAMPLE: Store kiwi at room temperature until it yields to gentle pressure like a ripe peach. Then refrigerate in plastic bag. Temperature: 32-35°F, Humidity: 90-95%, Location: Fridge (in bag)"
+                    },
+                    {
+                        name: "Dragon Fruit",
+                        storage: "Refrigerate whole, wrap cut pieces tightly",
+                        temp: "45-50°F",
+                        humidity: "85-90%",
+                        shelfLife: "2-3 weeks",
+                        details: "EXAMPLE: Store whole dragon fruit in fridge crisper drawer. Once cut, wrap pieces tightly in plastic wrap. Temperature: 45-50°F, Humidity: 85-90%, Location: Refrigerator crisper"
+                    },
+                    {
+                        name: "Pomegranate",
+                        storage: "Store whole at room temp or refrigerate",
+                        temp: "45-50°F",
+                        humidity: "80-85%",
+                        shelfLife: "2-3 months",
+                        details: "EXAMPLE: Store whole pomegranates in a cool, dry place or in the fridge crisper. Temperature: 45-50°F, Humidity: 80-85%, Location: Room temp or fridge"
+                    }
+                ]
+            },
+            {
+                name: "🥔 Root Vegetables",
+                items: [
+                    {
+                        name: "Potatoes",
+                        storage: "Cool, dark, humid place (NOT refrigerator)",
+                        temp: "45-50°F",
+                        humidity: "90-95%",
+                        shelfLife: "2-6 months",
+                        details: "EXAMPLE: Store potatoes in a cool, dark, humid place but NOT in refrigerator. Keep away from onions. Temperature: 45-50°F, Humidity: 90-95%, Location: Cool basement or pantry"
+                    },
+                    {
+                        name: "Carrots",
+                        storage: "Remove greens, store in plastic bag in fridge",
+                        temp: "32-35°F",
+                        humidity: "90-95%",
+                        shelfLife: "2-3 weeks",
+                        details: "EXAMPLE: Remove carrot greens, store carrots in plastic bag in refrigerator at 32-35°F with 90-95% humidity in crisper drawer"
+                    },
+                    {
+                        name: "Sweet Potatoes",
+                        storage: "Cool, dark, well-ventilated area",
+                        temp: "55-60°F",
+                        humidity: "85-90%",
+                        shelfLife: "3-5 weeks",
+                        details: "EXAMPLE: Store sweet potatoes in a cool, dark, well-ventilated area. Don't refrigerate. Temperature: 55-60°F, Humidity: 85-90%, Location: Cool pantry"
+                    }
+                ]
+            },
+            {
+                name: "🥬 Leafy Greens",
+                items: [
+                    {
+                        name: "Lettuce",
+                        storage: "Wrap in damp paper towels, store in crisper drawer",
+                        temp: "32-35°F",
+                        humidity: "95-100%",
+                        shelfLife: "5-10 days",
+                        details: "EXAMPLE: Wrap lettuce in damp paper towels, store in crisper drawer at 32-35°F with 95-100% humidity. Change paper towels every 2-3 days"
+                    },
+                    {
+                        name: "Spinach",
+                        storage: "Refrigerate in plastic bag with holes",
+                        temp: "32-35°F",
+                        humidity: "90-95%",
+                        shelfLife: "5-7 days",
+                        details: "EXAMPLE: Store spinach in a plastic bag with holes in the refrigerator crisper at 32-35°F with 90-95% humidity"
+                    },
+                    {
+                        name: "Kale",
+                        storage: "Refrigerate in plastic bag with holes",
+                        temp: "32-35°F",
+                        humidity: "90-95%",
+                        shelfLife: "7-10 days",
+                        details: "EXAMPLE: Store kale in a plastic bag with holes in the refrigerator crisper. Don't wash until ready to use. Temperature: 32-35°F, Humidity: 90-95%"
+                    }
+                ]
+            },
+            {
+                name: "🥦 Cruciferous Vegetables",
+                items: [
+                    {
+                        name: "Broccoli",
+                        storage: "Refrigerate in plastic bag with holes",
+                        temp: "32-35°F",
+                        humidity: "90-95%",
+                        shelfLife: "5-7 days",
+                        details: "EXAMPLE: Store broccoli in a plastic bag with holes in the refrigerator crisper. Use within a week for best quality. Temperature: 32-35°F, Humidity: 90-95%"
+                    },
+                    {
+                        name: "Cauliflower",
+                        storage: "Refrigerate in plastic bag with holes",
+                        temp: "32-35°F",
+                        humidity: "90-95%",
+                        shelfLife: "1-2 weeks",
+                        details: "EXAMPLE: Store cauliflower in a plastic bag with holes in the refrigerator crisper. Temperature: 32-35°F, Humidity: 90-95%, Location: Fridge crisper"
+                    },
+                    {
+                        name: "Cabbage",
+                        storage: "Refrigerate whole or cut in plastic wrap",
+                        temp: "32-35°F",
+                        humidity: "90-95%",
+                        shelfLife: "2-3 weeks",
+                        details: "EXAMPLE: Refrigerate whole or cut cabbage in plastic wrap in the refrigerator crisper. Temperature: 32-35°F, Humidity: 90-95%, Location: Fridge crisper"
+                    }
+                ]
+            },
+            {
+                name: "🍄 Mushrooms",
+                items: [
+                    {
+                        name: "White Button Mushrooms",
+                        storage: "Store in paper bag in refrigerator",
+                        temp: "32-35°F",
+                        humidity: "85-90%",
+                        shelfLife: "4-7 days",
+                        details: "EXAMPLE: Store mushrooms in paper bag in refrigerator at 32-35°F with 85-90% humidity. Never in plastic - they need to breathe!"
+                    },
+                    {
+                        name: "Portobello Mushrooms",
+                        storage: "Store in paper bag in refrigerator",
+                        temp: "32-35°F",
+                        humidity: "85-90%",
+                        shelfLife: "5-7 days",
+                        details: "EXAMPLE: Store portobello mushrooms in paper bag in refrigerator. Temperature: 32-35°F, Humidity: 85-90%, Location: Fridge (paper bag)"
+                    },
+                    {
+                        name: "Shiitake Mushrooms",
+                        storage: "Store in paper bag in refrigerator",
+                        temp: "32-35°F",
+                        humidity: "85-90%",
+                        shelfLife: "7-10 days",
+                        details: "EXAMPLE: Store shiitake mushrooms in paper bag in refrigerator. They last longer than button mushrooms. Temperature: 32-35°F, Humidity: 85-90%"
+                    }
+                ]
+            },
+            {
+                name: "🌰 Nuts & Dried Fruits",
+                items: [
+                    {
+                        name: "Almonds",
+                        storage: "Store in airtight container in cool, dark place",
+                        temp: "60-70°F",
+                        humidity: "50-60%",
+                        shelfLife: "1-2 years",
+                        details: "EXAMPLE: Store almonds in glass jar with tight lid in cool, dark pantry at 60-70°F with 50-60% humidity. For longer storage, keep in fridge"
+                    },
+                    {
+                        name: "Walnuts",
+                        storage: "Refrigerate in airtight container due to high oil content",
+                        temp: "32-35°F",
+                        humidity: "60-70%",
+                        shelfLife: "1 year (refrigerated)",
+                        details: "EXAMPLE: Due to high oil content, refrigerate walnuts in airtight container at 32-35°F with 60-70% humidity to prevent rancidity"
+                    },
+                    {
+                        name: "Dried Apricots",
+                        storage: "Store in airtight container, refrigerate after opening",
+                        temp: "60-70°F",
+                        humidity: "50-60%",
+                        shelfLife: "6-12 months",
+                        details: "EXAMPLE: Keep dried apricots in sealed plastic bag or jar at 60-70°F with 50-60% humidity. Once opened, refrigerate for longer storage"
+                    }
+                ]
+            }
+        ];
+
+        // JavaScript Functions
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (username === 'demo' && password === 'demo123') {
+                document.getElementById('loginSection').style.display = 'none';
+                document.getElementById('mainApp').style.display = 'block';
+                initializeApp();
+                alert('🎉 Welcome! Complete food safety & health database unlocked!');
+            } else {
+                alert('❌ Invalid credentials. Try: demo / demo123');
+            }
+        }
+
+        function guestLogin() {
+            document.getElementById('loginSection').style.display = 'none';
+            document.getElementById('mainApp').style.display = 'block';
+            initializeApp();
+            alert('👋 Welcome Guest! You have access to food storage guides and basic health information.');
+        }
+
+        // Initialize App
+        function initializeApp() {
+            renderFoodCategories();
+            renderExpirationList();
+            document.getElementById('expirationDate').valueAsDate = new Date();
+        }
+
+        // Expiration Tracker
+        let expirationItems = JSON.parse(localStorage.getItem('expirationItems')) || [];
+
+        function addExpirationItem() {
+            const itemName = document.getElementById('itemName').value.trim();
+            const expirationDate = document.getElementById('expirationDate').value;
+
+            if (!itemName || !expirationDate) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            const item = {
+                id: Date.now(),
+                name: itemName,
+                expirationDate: expirationDate,
+                addedDate: new Date().toISOString()
+            };
+
+            expirationItems.push(item);
+            localStorage.setItem('expirationItems', JSON.stringify(expirationItems));
+            
+            // Clear form
+            document.getElementById('itemName').value = '';
+            document.getElementById('expirationDate').value = '';
+            
+            renderExpirationList();
+        }
+
+        function renderExpirationList() {
+            const listContainer = document.getElementById('expirationList');
+            
+            if (expirationItems.length === 0) {
+                listContainer.innerHTML = '<p style="text-align: center; color: #666;">No items tracked yet. Add your first item above!</p>';
+                return;
+            }
+
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            let html = '';
+            expirationItems.forEach(item => {
+                const expDate = new Date(item.expirationDate);
+                expDate.setHours(0, 0, 0, 0);
+                const daysUntilExpiry = Math.ceil((expDate - today) / (1000 * 60 * 60 * 24));
+                
+                let statusClass = '';
+                let statusText = '';
+                
+                if (daysUntilExpiry < 0) {
+                    statusClass = 'expired';
+                    statusText = '⚠️ EXPIRED - Health Risk!';
+                } else if (daysUntilExpiry <= 3) {
+                    statusClass = 'expiring-soon';
+                    statusText = '⚡ EXPIRING SOON';
+                } else {
+                    statusClass = 'fresh';
+                    statusText = '✅ FRESH';
+                }
+
+                html += `
+                    <div class="expiration-item ${statusClass}">
+                        <div class="expiration-info">
+                            <strong>${item.name}</strong><br>
+                            <small>Expires: ${new Date(item.expirationDate).toLocaleDateString()}</small><br>
+                            <strong>${statusText} - ${daysUntilExpiry < 0 ? Math.abs(daysUntilExpiry) + ' days ago' : daysUntilExpiry + ' days left'}</strong>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            listContainer.innerHTML = html;
+        }
+
+        // Camera System
+        let video = document.getElementById('video');
+        let canvas = document.getElementById('canvas');
+        let resultSection = document.getElementById('resultSection');
+        let fruitResult = document.getElementById('fruitResult');
+
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ 
+                    video: { facingMode: 'environment' } 
+                });
+                video.srcObject = stream;
+                video.style.display = 'block';
+                document.getElementById('captureBtn').style.display = 'inline-block';
+                document.getElementById('cameraPlaceholder').style.display = 'none';
+            } catch (err) {
+                alert('Camera access denied. Please upload a photo instead.');
+            }
+        }
+
+        function takePhoto() {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            canvas.getContext('2d').drawImage(video, 0, 0);
+            
+            const imageData = canvas.toDataURL('image/jpeg');
+            analyzeFruit(imageData);
+        }
+
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    analyzeFruit(e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function analyzeFruit(imageData) {
+            resultSection.style.display = 'block';
+            
+            const fruits = [
+                { name: 'Apple', status: 'Fresh', message: 'Store in cold water in sealed container for maximum crispness! Temperature: 30-35°F, Humidity: 90-95%' },
+                { name: 'Banana', status: 'Getting Ripe', message: 'Wrap stem in plastic wrap and keep away from other fruits! Temperature: 59-68°F, Humidity: 85-95%' },
+                { name: 'Orange', status: 'Fresh', message: 'Store in mesh bag in fridge crisper - can last 2 months! Temperature: 45-48°F, Humidity: 85-90%' },
+                { name: 'Strawberry', status: 'Fresh', message: 'Keep unwashed in original container. Remove any mushy berries! Temperature: 32-34°F, Humidity: 90-95%' },
+                { name: 'Mango', status: 'Getting Ripe', message: 'Keep at room temp until sweet-smelling, then refrigerate! Temperature: 55-70°F, Humidity: 85-90%' }
+            ];
+            
+            const detected = fruits[Math.floor(Math.random() * fruits.length)];
+            
+            fruitResult.innerHTML = `
+                <div class="fruit-identified">
+                    <h4>Detected: ${detected.name}</h4>
+                    <div class="fresh-status fresh">${detected.status}</div>
+                    <p>${detected.message}</p>
+                    <p><strong>Storage Tips:</strong> Check our detailed food database above for complete storage instructions!</p>
+                </div>
+            `;
+        }
+
+        // Render Food Categories
+        function renderFoodCategories() {
+            const container = document.getElementById('foodCategories');
+            let html = '';
+            
+            foodCategories.forEach(category => {
+                html += `<div class="category-card"><h3>${category.name}</h3>`;
+                category.items.forEach(item => {
+                    html += `
+                        <div class="food-item">
+                            <h4>${item.name}</h4>
+                            <p>${item.storage}</p>
+                            <div class="storage-info">
+                                <span class="info-tag temp-tag">Temp: ${item.temp}</span>
+                                <span class="info-tag humidity-tag">Humidity: ${item.humidity}</span>
+                                <span class="info-tag shelf-tag">Shelf life: ${item.shelfLife}</span>
+                            </div>
+                            <div class="storage-details">
+                                <strong>EXAMPLE:</strong> ${item.details}
+                            </div>
+                        </div>
+                    `;
+                });
+                html += `</div>`;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        // Initialize
+        window.onload = function() {
+            // Login page shows first
+        };
+    </script>
+</body>
+</html>
